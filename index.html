@@ -14,12 +14,13 @@
   </head>
   <body>
     <header class="max-w-[85%] mx-auto pt-2">
+      <!-- navbar starts here  -->
       <section>
         <nav>
-          <div class="navbar bg-base-100">
-            <div class="navbar-start">
+          <div class="navbar px-0 bg-base-100">
+            <div class="navbar-start pl-0">
               <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <div tabindex="0" role="button" class="btn btn-ghost pl-0 lg:hidden">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-5 w-5"
@@ -40,7 +41,7 @@
                   <li><a href="#">Search</a></li>
                 </ul>
               </div>
-              <a class="btn btn-ghost text-xl hover:text-green-500 hover:bg-green-50">Padma Pathik</a>
+              <a class="btn btn-ghost text-xl hover:text-green-500 hover:bg-white pl-0">Padma Pathik</a>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal px-1">
@@ -58,9 +59,58 @@
           </div>
         </nav>
       </section>
+      <!-- navbar ends here  -->
+      <!-- banner starts here  -->
+      <section>
+        <div class="pt-3 relative">
+          <div class="hero rounded-lg" style="background-image: url('./images/banner.png'); background-size: 100% 100%">
+            <div class="hero-overlay rounded-lg bg-opacity-20"></div>
+            <div class="hero-content text-center text-neutral-content">
+              <div class="max-w-[60%]">
+                <h1 class="mb-6 text-5xl font-bold mt-6 text-white">End-to-End Travel with</h1>
+                <h1 class="mb-6 text-5xl font-bold text-[#1DD100]">Padma Pathik</h1>
+                <p class="mb-6 text-[FFFFFF80]">
+                  Yes, you can run unit tests and view the results directly within the app. The integrated testing
+                  features allow for a streamlined.
+                </p>
+                <button
+                  class="btn btn-primary bg-[#1DD100] text-xl text-black border-green-500 mb-16 hover:bg-green-400"
+                >
+                  Buy Tickets
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-4 translate-y-[-50px] justify-between mx-[7%]">
+          <div class="p-1 lg:p-6 flex border-b-4 border-[#1DD100] bg-white rounded-lg">
+            <div class="my-auto mx-5"><i class="fa-solid fa-people-group text-[#1DD100] text-2xl lg:text-3xl"></i></div>
+            <div class="flex flex-col justify-center items-center">
+              <p class="text-2xl font-bold">500K+</p>
+              <p class="text-sm lg:text-base">Registered users</p>
+            </div>
+          </div>
+          <div class="p-1 lg:p-6 flex border-b-4 border-[#1DD100] bg-white rounded-lg">
+            <div class="my-auto mx-5"><i class="fa-solid fa-ticket text-[#1DD100] text-3xl"></i></div>
+            <div class="flex flex-col justify-center items-center">
+              <p class="text-2xl font-bold">1.7 lacks</p>
+              <p class="text-base">Tickets sold</p>
+            </div>
+          </div>
+          <div class="p-1 lg:p-6 flex border-b-4 border-[#1DD100] bg-white rounded-lg">
+            <div class="my-auto mx-5"><i class="fa-solid fa-truck-front text-[#1DD100] text-3xl"></i></div>
+            <div class="flex flex-col justify-center items-center">
+              <p class="text-2xl font-bold">80K+</p>
+              <p class="text-base">Rental partners</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- banner ends here  -->
     </header>
 
-    <body></body>
+    <main></main>
 
     <footer></footer>
 
