@@ -21,20 +21,11 @@
             <div class="navbar-start pl-0">
               <div class="dropdown">
                 <div tabindex="0" role="button" class="btn btn-ghost pl-0 lg:hidden">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
                   </svg>
                 </div>
-                <ul
-                  tabindex="0"
-                  class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-                >
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                   <li><a href="#">Home</a></li>
                   <li><a href="#">About</a></li>
                   <li><a href="#">Destination</a></li>
@@ -52,9 +43,7 @@
               </ul>
             </div>
             <div class="navbar-end">
-              <a class="btn bg-green-50 hover:bg-green-100 text-green-500 border-green-500 text-xl"
-                >Bus <i class="fa-solid fa-bus"></i
-              ></a>
+              <a class="btn bg-green-50 hover:bg-green-100 text-green-500 border-green-500 text-xl">Bus <i class="fa-solid fa-bus"></i></a>
             </div>
           </div>
         </nav>
@@ -70,14 +59,9 @@
                 <h1 class="mb-6 text-5xl font-bold mt-6 text-white">End-to-End Travel with</h1>
                 <h1 class="mb-6 text-5xl font-bold text-[#1DD100]">Padma Pathik</h1>
                 <p class="mb-6 text-[FFFFFF80]">
-                  Yes, you can run unit tests and view the results directly within the app. The integrated testing
-                  features allow for a streamlined.
+                  Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.
                 </p>
-                <button
-                  class="btn btn-primary bg-[#1DD100] text-xl text-black border-green-500 mb-16 hover:bg-green-400"
-                >
-                  Buy Tickets
-                </button>
+                <button class="btn btn-primary bg-[#1DD100] text-xl text-black border-green-500 mb-16 hover:bg-green-400">Buy Tickets</button>
               </div>
             </div>
           </div>
@@ -144,15 +128,74 @@
         </div>
 
         <div class="mt-10 text-center">
-          <button class="btn btn-primary bg-white text-xl text-[#1DD100] border-green-500 mb-16 hover:bg-green-50">
-            See All Offers
-          </button>
+          <button class="btn btn-primary bg-white text-xl text-[#1DD100] border-green-500 mb-16 hover:bg-green-50">See All Offers</button>
         </div>
       </section>
       <!-- offer section starts here -->
+
+      <!-- ticket buying section starts here  -->
+      <section class="border-t-2 border-green-400 rounded-t-3xl bg-[#F8F8F8]">
+        <div class="pt-20 pb-10">
+          <h4 class="text-3xl text-center font-semibold mb-4">Padma Pathik Paribahan</h4>
+          <p class="text-[FFFFFF80] w-[70%] mx-auto text-center">
+            Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .
+          </p>
+        </div>
+
+        <!-- ticket ui section  -->
+        <section class="w-[85%] mx-auto bg-white rounded-2xl">
+          <div class="flex justify-around w-full rounded-3xl">
+            <div class="w-full">
+              <div class="flex justify-between w-full p-8">
+                <div class="flex justify-between w-full">
+                  <div class="flex items-start">
+                    <div>
+                      <img class="p-3" src="./images/bus-logo.png" alt="" srcset="" />
+                    </div>
+                    <div>
+                      <h4 class="text-3xl text-center font-semibold">Greenline Paribahan</h4>
+                      <p class="text-[FFFFFF80]text-center">Coach-009-WEB ! AC_Business</p>
+                    </div>
+                  </div>
+                  <div class="mt-4 text-center">
+                    <button class="btn btn-primary text-sm text-[#1DD100] border-green-500 hover:border-green-500 bg-green-50 hover:bg-white">
+                      <img src="./images/seat-green.png" alt="" /><span>40</span> Seats Left
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="w-[95%] mx-8 mb-4">
+                <div class="mx-auto px-8 rounded-2xl bg-[#f8f8f8]">
+                  <div class="flex justify-between py-4 border-b-2 border-dashed border-gray-500 font-semibold">
+                    <p>Route</p>
+                    <p>Dhaka-Sylhet</p>
+                  </div>
+
+                  <div class="flex justify-between py-3 border-b-2 border-dashed border-gray-500 font-semibold">
+                    <p>Departure Time</p>
+                    <p>9:00PM</p>
+                  </div>
+                  <div class="flex justify-between py-4 gap-4 font-semibold">
+                    <button class="btn btn-xs sm:btn-sm md:btn-md">Boarding Point - Laxmipur</button>
+                    <button class="btn btn-xs sm:btn-sm md:btn-md">Dropping Point - Bogura</button>
+                    <button class="btn btn-xs sm:btn-sm md:btn-md">Est. Time - 11 Hour</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img class="translate-x-6 -translate-y-2" src="./images/info-devider.png" alt="" />
+            <div class="p-8 flex flex-col justify-center items-center mx-8">
+              <img class="mx-auto" src="./images/fare.png" alt="" srcset="" />
+              <h4 class="text-xl text-center font-semibold whitespace-nowrap">550 Taka</h4>
+              <p class="text-[FFFFFF80] text-center">per Seat</p>
+            </div>
+          </div>
+        </section>
+        <!-- ticekt ui section ends  -->
+      </section>
     </main>
 
-    <footer></footer>
+    <footer class="mt-96"></footer>
 
     <script src="./script.js"></script>
   </body>
