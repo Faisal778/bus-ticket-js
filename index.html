@@ -12,7 +12,7 @@
     <!-- font awesome  -->
     <script src="https://kit.fontawesome.com/9f498ab34e.js" crossorigin="anonymous"></script>
   </head>
-  <body>
+  <body class="scroll-smooth">
     <header class="max-w-[85%] mx-auto pt-2">
       <!-- navbar starts here  -->
       <section>
@@ -61,7 +61,11 @@
                 <p class="mb-6 text-[FFFFFF80]">
                   Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined.
                 </p>
-                <button class="btn btn-primary bg-[#1DD100] text-xl text-black border-green-500 mb-16 hover:bg-green-400">Buy Tickets</button>
+                <a href="#ticket-ui">
+                  <button class="scroll-smooth btn btn-primary bg-[#1DD100] text-xl text-black border-green-500 mb-16 hover:bg-green-400">
+                    Buy Tickets
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -143,8 +147,8 @@
         </div>
 
         <!-- ticket ui section  -->
-        <section class="w-[85%] mx-auto bg-white rounded-2xl">
-          <div class="flex justify-around w-full rounded-3xl">
+        <section id="ticket-ui" class="w-[85%] mx-auto bg-white rounded-2xl">
+          <div class="flex justify-around flex-col lg:flex-row w-full rounded-3xl">
             <div class="w-full">
               <div class="flex justify-between w-full p-8">
                 <div class="flex justify-between w-full">
@@ -159,7 +163,7 @@
                   </div>
                   <div class="mt-4 text-center">
                     <button class="btn btn-primary text-sm text-[#1DD100] border-green-500 hover:border-green-500 bg-green-50 hover:bg-white">
-                      <img src="./images/seat-green.png" alt="" /><span>40</span> Seats Left
+                      <img src="./images/seat-green.png" alt="" /><span id="seat-remaining">40</span> Seats Left
                     </button>
                   </div>
                 </div>
@@ -175,18 +179,18 @@
                     <p>Departure Time</p>
                     <p>9:00PM</p>
                   </div>
-                  <div class="flex justify-between py-4 gap-4 font-semibold">
-                    <button class="btn btn-xs sm:btn-sm md:btn-md">Boarding Point - Laxmipur</button>
-                    <button class="btn btn-xs sm:btn-sm md:btn-md">Dropping Point - Bogura</button>
-                    <button class="btn btn-xs sm:btn-sm md:btn-md">Est. Time - 11 Hour</button>
+                  <div class="flex flex-col lg:flex-row justify-between py-4 gap-4 font-semibold">
+                    <button class="btn btn-xs sm:btn-sm">Boarding Point - Laxmipur</button>
+                    <button class="btn btn-xs sm:btn-sm">Dropping Point - Bogura</button>
+                    <button class="btn btn-xs sm:btn-sm">Est. Time - 11 Hour</button>
                   </div>
                 </div>
               </div>
             </div>
-            <img class="translate-x-6 -translate-y-2" src="./images/info-devider.png" alt="" />
+            <img class="hidden lg:flex translate-x-6 -translate-y-2" src="./images/info-devider.png" alt="" />
             <div class="p-8 flex flex-col justify-center items-center mx-8">
               <img class="mx-auto" src="./images/fare.png" alt="" srcset="" />
-              <h4 class="text-xl text-center font-semibold whitespace-nowrap">550 Taka</h4>
+              <h4 class="text-xl text-center font-semibold whitespace-nowrap"><span id="price">550</span> Taka</h4>
               <p class="text-[FFFFFF80] text-center">per Seat</p>
             </div>
           </div>
@@ -195,7 +199,7 @@
 
         <!-- but sit map starts here  -->
         <section class="w-[85%] mx-auto bg-white rounded-2xl mt-6 pt-8 pb-10">
-          <div class="flex justify-around">
+          <div class="flex justify-around flex-col lg:flex-row">
             <div class="w-[50%]">
               <div>
                 <p class="text-2xl font-semibold border-b-2 border-dashed border-gray-400 pb-4">Select Your Seat</p>
@@ -220,12 +224,20 @@
                   </div>
                   <div class="flex justify-between w-full">
                     <div class="flex gap-6">
-                      <div><button class="btn no-animation w-20">A1</button></div>
-                      <div><button class="btn no-animation w-20">A2</button></div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">A1</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">A2</button>
+                      </div>
                     </div>
                     <div class="flex gap-6">
-                      <div><button class="btn no-animation w-20">A3</button></div>
-                      <div><button class="btn no-animation w-20">A4</button></div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">A3</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">A4</button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -238,12 +250,228 @@
                   </div>
                   <div class="flex justify-between w-full">
                     <div class="flex gap-6">
-                      <div><button class="btn no-animation w-20">B1</button></div>
-                      <div><button class="btn no-animation w-20">B2</button></div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">B1</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">B2</button>
+                      </div>
                     </div>
                     <div class="flex gap-6">
-                      <div><button class="btn no-animation w-20">B3</button></div>
-                      <div><button class="btn no-animation w-20">B4</button></div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">B3</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">B4</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="b-div flex gap-6 pt-6">
+                  <div>
+                    <p class="pt-3 pr">C</p>
+                  </div>
+                  <div class="flex justify-between w-full">
+                    <div class="flex gap-6">
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">C1</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">C2</button>
+                      </div>
+                    </div>
+                    <div class="flex gap-6">
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">C3</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">C4</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="b-div flex gap-6 pt-6">
+                  <div>
+                    <p class="pt-3 pr">D</p>
+                  </div>
+                  <div class="flex justify-between w-full">
+                    <div class="flex gap-6">
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">D1</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">D2</button>
+                      </div>
+                    </div>
+                    <div class="flex gap-6">
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">D3</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">D4</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="b-div flex gap-6 pt-6">
+                  <div>
+                    <p class="pt-3 pr">E</p>
+                  </div>
+                  <div class="flex justify-between w-full">
+                    <div class="flex gap-6">
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">E1</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">E2</button>
+                      </div>
+                    </div>
+                    <div class="flex gap-6">
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">E3</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">E4</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="b-div flex gap-6 pt-6">
+                  <div>
+                    <p class="pt-3 pr">F</p>
+                  </div>
+                  <div class="flex justify-between w-full">
+                    <div class="flex gap-6">
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">F1</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">F2</button>
+                      </div>
+                    </div>
+                    <div class="flex gap-6">
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">F3</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">F4</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="b-div flex gap-6 pt-6">
+                  <div>
+                    <p class="pt-3 pr">G</p>
+                  </div>
+                  <div class="flex justify-between w-full">
+                    <div class="flex gap-6">
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">G1</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">G2</button>
+                      </div>
+                    </div>
+                    <div class="flex gap-6">
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">G3</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">G4</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="b-div flex gap-6 pt-6">
+                  <div>
+                    <p class="pt-3 pr">H</p>
+                  </div>
+                  <div class="flex justify-between w-full">
+                    <div class="flex gap-6">
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">H1</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">H2</button>
+                      </div>
+                    </div>
+                    <div class="flex gap-6">
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">H3</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">H4</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="b-div flex gap-6 pt-6">
+                  <div>
+                    <p class="pt-3 pr">I</p>
+                  </div>
+                  <div class="flex justify-between w-full">
+                    <div class="flex gap-6">
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">I1</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">I2</button>
+                      </div>
+                    </div>
+                    <div class="flex gap-6">
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">I3</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">I4</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="b-div flex gap-6 pt-6">
+                  <div>
+                    <p class="pt-3 pr">J</p>
+                  </div>
+                  <div class="flex justify-between w-full">
+                    <div class="flex gap-6">
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">J1</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">J2</button>
+                      </div>
+                    </div>
+                    <div class="flex gap-6">
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">J3</button>
+                      </div>
+                      <div>
+                        <button class="seat-btn btn no-animation w-20">J4</button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -258,27 +486,27 @@
 
               <div class="my-4 bg-[#f8f8f8] rounded-lg p-2">
                 <div class="flex justify-between">
-                  <p class="font-semi-bold">Seat</p>
+                  <p class="font-semi-bold">Seat <span id="seat-count" class="bg-green-500 px-2 text-white rounded-lg">0</span></p>
                   <p class="font-semi-bold">Class</p>
                   <p class="font-semi-bold">Price</p>
                 </div>
 
                 <div class="ticket-details mt-4 border-b-2 border-gray-400"></div>
-
+                <div id="total-price"></div>
                 <div class="flex justify-between mt-4">
                   <p class="font-bold">Total Price</p>
-                  <p class="font-bold">BDT <span>0</span></p>
+                  <p class="font-bold">BDT <span id="total-sum">0</span></p>
                 </div>
 
-                <div class="flex flex-row gap-4 mt-4">
-                  <input type="text" placeholder="Enter Cupon" class="input input-bordered input-success w-full max-w-xs" />
+                <div id="coupon" class="flex flex-row gap-4 mt-4">
+                  <input type="text" id="coupon-btn" placeholder="Enter Cupon" class="input input-bordered input-success w-full max-w-xs" />
 
-                  <button class="btn text-white bg-[#1DD100]">Apply</button>
+                  <button onclick="updateGrandtotal('coupon-btn')" class="btn text-white bg-[#1DD100]">Apply</button>
                 </div>
 
                 <div class="flex justify-between mt-4">
                   <p class="font-bold">Grand Total</p>
-                  <p class="font-bold">BDT <span>0</span></p>
+                  <p class="font-bold">BDT <span id="grand-total">0</span></p>
                 </div>
               </div>
 
