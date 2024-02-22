@@ -13,7 +13,7 @@ for (const btn of seatBtn){
       event.target.setAttribute("disabled", true);
       seatCounter = seatCounter + 1;
       if (seatCounter > 4){
-        alert('You have reached seat limit');
+        alert('You have reached maximum seat limit');
       } else{
 
         document.getElementById('seat-count').innerText = seatCounter ;
@@ -71,14 +71,55 @@ function updateGrandtotal(id){
     const couponCode = document.getElementById('coupon-btn').value;
      let grandTotal = document.getElementById('grand-total');
     if(couponCode === "NEW15"){
-        if (seatCounter >= 4){
         document.getElementById('coupon').style.display = "none";
-        }
+
+        const discount = document.getElementById('discount');
+
+        const div = document.createElement('div');
+        const p1 = document.createElement('p');
+        const p2 = document.createElement('p');
+      
+
+        div.appendChild(p1);
+        div.appendChild(p2);
+        div.classList.add("flex");
+        div.classList.add("justify-between");
+        div.classList.add("p-4");
+
+        p1.innerText = "Discount";
+        p2.innerText = intSum*.15;
+
+        discount.appendChild(div);
 
         grandTotal = intSum - (intSum*.15);
         console.log(grandTotal);
         document.getElementById('grand-total').innerText = grandTotal;
-    } else{
+    } else if(couponCode === "Couple 20"){
+
+        document.getElementById('coupon').style.display = "none";
+
+        const discount = document.getElementById('discount');
+
+        const div = document.createElement('div');
+        const p1 = document.createElement('p');
+        const p2 = document.createElement('p');
+      
+
+        div.appendChild(p1);
+        div.appendChild(p2);
+        div.classList.add("flex");
+        div.classList.add("justify-between");
+        div.classList.add("p-4");
+
+        p1.innerText = "Discount";
+        p2.innerText = intSum*.2;
+
+        discount.appendChild(div);
+
+        grandTotal = intSum - (intSum*.2);
+        
+        document.getElementById('grand-total').innerText = grandTotal;
+    }else{
         alert('Please Enter a valid coupon');
     }
 
