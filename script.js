@@ -78,7 +78,6 @@ function updateGrandtotal(id){
         const div = document.createElement('div');
         const p1 = document.createElement('p');
         const p2 = document.createElement('p');
-      
 
         div.appendChild(p1);
         div.appendChild(p2);
@@ -94,7 +93,8 @@ function updateGrandtotal(id){
         grandTotal = intSum - (intSum*.15);
         console.log(grandTotal);
         document.getElementById('grand-total').innerText = grandTotal;
-    } else if(couponCode === "Couple 20"){
+    } 
+    if(couponCode === "Couple 20"){
 
         document.getElementById('coupon').style.display = "none";
 
@@ -103,8 +103,7 @@ function updateGrandtotal(id){
         const div = document.createElement('div');
         const p1 = document.createElement('p');
         const p2 = document.createElement('p');
-      
-
+    
         div.appendChild(p1);
         div.appendChild(p2);
         div.classList.add("flex");
